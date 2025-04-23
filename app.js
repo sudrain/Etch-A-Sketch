@@ -33,7 +33,7 @@ function changeSize() {
     button = document.querySelector('#size');
     button.addEventListener('click', function () {
         size = prompt('Set field 16 - 100', 32);
-        if (!(15 < size < 101)) {
+        if (size < 16 || size > 100) {
             return alert('Only 16 - 100 numbers')
         }
         removeField();
